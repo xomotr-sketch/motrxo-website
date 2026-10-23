@@ -1,8 +1,6 @@
 (() => {
-  const cards = [...document.querySelectorAll('#panels article.cd')];
-  const sections = [...document.querySelectorAll('#panels .cat-sec')];
   const query = document.querySelector('#q');
-  const tabs = [...document.querySelectorAll('#tabs .tab')];
+  const tabsRoot = document.querySelector('#tabs');
   const nav = document.querySelector('#nav');
   const burger = document.querySelector('#burger');
 
@@ -12,6 +10,8 @@
   };
 
   const applyFilter = () => {
+    const tabs = [...document.querySelectorAll('#tabs .tab')];
+    const sections = [...document.querySelectorAll('#panels .cat-sec')];
     const selected = document.querySelector('#tabs .tab.on')?.dataset.c || 'all';
     const term = (query?.value || '').trim().toLocaleLowerCase();
     let visible = 0;
@@ -20,8 +20,7 @@
       const categoryMatch = selected === 'all' || selected === category;
       let sectionVisible = false;
       section.querySelectorAll('article.cd').forEach(card => {
-        const text = card.textContent.toLocaleLowerCase();
-        const match = categoryMatch && (!term || text.includes(term));
+        const match = categoryMatch && (!term || card.textContent.toLocaleLowerCase().includes(term));
         card.hidden = !match;
         if (match) { visible += 1; sectionVisible = true; }
       });
@@ -29,16 +28,15 @@
     });
     const empty = document.querySelector('#none');
     if (empty) empty.hidden = visible !== 0;
+    tabs.forEach(tab => tab.setAttribute('aria-selected', String(tab.classList.contains('on'))));
   };
 
-  tabs.forEach(tab => tab.addEventListener('click', () => {
-    tabs.forEach(t => {
-      const active = t === tab;
-      t.classList.toggle('on', active);
-      t.setAttribute('aria-selected', String(active));
-    });
+  tabsRoot?.addEventListener('click', event => {
+    const tab = event.target.closest('.tab');
+    if (!tab || !tabsRoot.contains(tab)) return;
+    tabsRoot.querySelectorAll('.tab').forEach(item => item.classList.toggle('on', item === tab));
     applyFilter();
-  }));
+  });
   query?.addEventListener('input', applyFilter);
   document.addEventListener('keydown', event => {
     if (event.key === '/' && document.activeElement !== query) {
@@ -46,6 +44,20 @@
     }
     if (event.key === 'Escape' && query) { query.value = ''; applyFilter(); query.blur(); }
   });
+
+  document.addEventListener('click', event => {
+    const name = event.target.closest('.cd .pn');
+    if (!name) return;
+    event.preventDefault();
+    const card = name.closest('.cd');
+    const panel = card?.querySelector('.product-info');
+    if (!panel) return;
+    const open = !panel.hasAttribute('hidden');
+    if (open) panel.setAttribute('hidden', '');
+    else panel.removeAttribute('hidden');
+    name.setAttribute('aria-expanded', String(!open));
+  });
+
   burger?.addEventListener('click', () => {
     const open = nav?.classList.toggle('open');
     burger.setAttribute('aria-expanded', String(Boolean(open)));
@@ -56,6 +68,8 @@
       burger?.setAttribute('aria-expanded', 'false');
     }
   });
+
+  document.addEventListener('cmscontent:ready', applyFilter);
   document.querySelector('#y')?.replaceChildren(String(new Date().getFullYear()));
   applyFilter();
 })();

@@ -1,0 +1,124 @@
+{
+  "seo": {
+    "title": "MOTRXO — اشتراكات بيانات وإصلاح وتشخيص السيارات",
+    "description": "اشتراكات بيانات الإصلاح وبرامج التشخيص الاحترافية للورش والفنيين — ALLDATA وHaynesPro وFord IDS وToyota Techstream وغيرها."
+  },
+  "brand": {
+    "logo": "assets/logo.webp",
+    "phoneNumber": "201016673956",
+    "phoneDisplay": "+20 101 667 3956",
+    "whatsappNumber": "201016673956",
+    "backgroundTheme": "blue",
+    "brands": [
+      "ALLDATA",
+      "Identifix",
+      "HaynesPro",
+      "Mitchell",
+      "HGS",
+      "Ford",
+      "Toyota",
+      "FCA",
+      "Mazda",
+      "GM",
+      "JLR",
+      "Opel",
+      "BMW",
+      "VAG"
+    ],
+    "headerButtonText": "اطلب الآن",
+    "skipText": "تخطَّ إلى المنتجات"
+  },
+  "navigation": [
+    {
+      "label": "الرئيسية",
+      "url": "#top"
+    },
+    {
+      "label": "المنتجات",
+      "url": "#shop"
+    },
+    {
+      "label": "الأخبار والنشرات",
+      "url": "#news"
+    },
+    {
+      "label": "التنزيلات",
+      "url": "#downloads"
+    },
+    {
+      "label": "كيف يعمل",
+      "url": "#how"
+    },
+    {
+      "label": "لماذا MOTRXO",
+      "url": "#why"
+    },
+    {
+      "label": "الأسئلة الشائعة",
+      "url": "#faq"
+    },
+    {
+      "label": "تواصل معنا",
+      "url": "#contact"
+    }
+  ],
+  "hero": {
+    "eyebrow": "وصول فوري · دعم عبر واتساب",
+    "title": "منصة تشخيص وإصلاح السيارات",
+    "highlight": "بمستوى الوكيل",
+    "lead": "اشترك في أشهر قواعد بيانات الإصلاح وبرامج التشخيص في العالم من مكان واحد. وفّر وقتك، وقلّل التخمين، وأصلح من أول مرة.",
+    "browseText": "تصفّح المنتجات",
+    "trialText": "اطلب تجربة عبر واتساب",
+    "stats": [
+      {
+        "value": "21+",
+        "label": "منتج احترافي"
+      },
+      {
+        "value": "24/7",
+        "label": "وصول أونلاين"
+      }
+    ],
+    "features": [
+      {
+        "title": "معلومات المصنع",
+        "description": "دقة بمستوى الوكيل"
+      },
+      {
+        "title": "مخططات الكهرباء",
+        "description": "تفاعلية ومفصّلة"
+      },
+      {
+        "title": "الأعطال وإجراءات الإصلاح",
+        "description": "أصلحها من أول مرة"
+      },
+      {
+        "title": "الترميز والبرمجة",
+        "description": "تحكم متقدم بالمركبة"
+      }
+    ],
+    "backgroundImage": ""
+  },
+  "footerNavigation": [
+    {
+      "label": "منصة التشخيص الاحترافية",
+      "url": "#about"
+    },
+    {
+      "label": "المنتجات",
+      "url": "#shop"
+    },
+    {
+      "label": "كيف يعمل",
+      "url": "#how"
+    },
+    {
+      "label": "الأسئلة الشائعة",
+      "url": "#faq"
+    },
+    {
+      "label": "تواصل معنا",
+      "url": "#contact"
+    }
+  ]
+}

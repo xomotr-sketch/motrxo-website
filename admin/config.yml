@@ -1,0 +1,259 @@
+backend:
+  name: github
+  repo: xomotr-sketch/motrxo-website
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site-content"
+    label: "إدارة الموقع"
+    files:
+      - name: "settings"
+        label: "الهوية والصفحة الرئيسية"
+        file: "content/settings.json"
+        format: "json"
+        fields:
+          - label: "بيانات محركات البحث"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "عنوان الموقع", name: "title", widget: "string" }
+              - { label: "وصف الموقع", name: "description", widget: "text" }
+          - label: "هوية الموقع والتواصل"
+            name: "brand"
+            widget: "object"
+            fields:
+              - { label: "الشعار", name: "logo", widget: "image", required: false }
+              - { label: "رقم واتساب الدولي بدون + أو مسافات", name: "whatsappNumber", widget: "string", hint: "مثال: 201012345678" }
+              - { label: "رقم الهاتف الدولي بدون + أو مسافات", name: "phoneNumber", widget: "string", hint: "مثال: 201012345678" }
+              - { label: "رقم الهاتف للعرض", name: "phoneDisplay", widget: "string" }
+              - { label: "نص زر أعلى الصفحة", name: "headerButtonText", widget: "string" }
+              - { label: "نص رابط تخطي المحتوى", name: "skipText", widget: "string" }
+              - label: "لون خلفية الموقع"
+                name: "backgroundTheme"
+                widget: "select"
+                options:
+                  - { label: "أزرق فاتح", value: "blue" }
+                  - { label: "أبيض", value: "white" }
+                  - { label: "كريمي دافئ", value: "warm" }
+                  - { label: "أخضر فاتح", value: "mint" }
+              - label: "أسماء العلامات في الشريط المتحرك"
+                name: "brands"
+                widget: "list"
+                field: { label: "العلامة", name: "brand", widget: "string" }
+          - label: "روابط القائمة الرئيسية"
+            name: "navigation"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "اسم الرابط", name: "label", widget: "string" }
+              - { label: "وجهة الرابط", name: "url", widget: "string", hint: "مثل #news أو رابط خارجي يبدأ بـ https://" }
+          - label: "روابط أسفل الموقع"
+            name: "footerNavigation"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "اسم الرابط", name: "label", widget: "string" }
+              - { label: "وجهة الرابط", name: "url", widget: "string" }
+          - label: "محتوى القسم الرئيسي"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "السطر الصغير فوق العنوان", name: "eyebrow", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "النص المميز في العنوان", name: "highlight", widget: "string" }
+              - { label: "النص التعريفي", name: "lead", widget: "text" }
+              - { label: "نص زر تصفح المنتجات", name: "browseText", widget: "string" }
+              - { label: "نص زر واتساب", name: "trialText", widget: "string" }
+              - { label: "صورة خلفية القسم الرئيسي", name: "backgroundImage", widget: "image", required: false }
+              - label: "الإحصاءات المختصرة"
+                name: "stats"
+                widget: "list"
+                summary: "{{fields.value}} — {{fields.label}}"
+                fields:
+                  - { label: "الرقم أو القيمة", name: "value", widget: "string" }
+                  - { label: "الوصف", name: "label", widget: "string" }
+              - label: "مميزات القسم الرئيسي"
+                name: "features"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "العنوان", name: "title", widget: "string" }
+                  - { label: "الوصف", name: "description", widget: "string" }
+      - name: "sections"
+        label: "محتوى أقسام الموقع"
+        file: "content/sections.json"
+        format: "json"
+        fields:
+          - label: "قسم التعريف"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "العنوان الصغير", name: "kicker", widget: "string" }
+              - { label: "العنوان الرئيسي", name: "title", widget: "string" }
+              - { label: "النص التعريفي", name: "description", widget: "text" }
+              - label: "بطاقات المميزات"
+                name: "cards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "العنوان", name: "title", widget: "string" }
+                  - { label: "الوصف", name: "description", widget: "text" }
+          - label: "عنوان كتالوج المنتجات"
+            name: "catalog"
+            widget: "object"
+            fields:
+              - { label: "العنوان الصغير", name: "kicker", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "description", widget: "text" }
+              - { label: "نص البحث داخل المنتجات", name: "searchPlaceholder", widget: "string" }
+              - { label: "اسم خيار عرض كل المنتجات", name: "allLabel", widget: "string" }
+              - { label: "رسالة عدم وجود نتائج", name: "emptyMessage", widget: "string" }
+              - { label: "نص رابط السؤال عن منتج", name: "emptyLinkText", widget: "string" }
+          - label: "قسم التنزيلات"
+            name: "downloads"
+            widget: "object"
+            fields:
+              - { label: "إظهار قسم التنزيلات", name: "enabled", widget: "boolean", default: false }
+              - { label: "العنوان الصغير", name: "kicker", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "description", widget: "text" }
+              - label: "ملفات التنزيل"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "اسم الملف", name: "title", widget: "string" }
+                  - { label: "الوصف", name: "description", widget: "text", required: false }
+                  - { label: "رابط الملف", name: "url", widget: "string" }
+          - label: "خطوات العمل"
+            name: "process"
+            widget: "object"
+            fields:
+              - { label: "العنوان الصغير", name: "kicker", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - label: "الخطوات"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "العنوان", name: "title", widget: "string" }
+                  - { label: "الوصف", name: "description", widget: "text" }
+          - label: "لماذا نحن"
+            name: "why"
+            widget: "object"
+            fields:
+              - { label: "العنوان الصغير", name: "kicker", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "description", widget: "text" }
+              - label: "نقاط المميزات"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "العنوان", name: "title", widget: "string" }
+                  - { label: "الوصف", name: "description", widget: "text" }
+          - label: "الأسئلة الشائعة"
+            name: "faq"
+            widget: "object"
+            fields:
+              - { label: "العنوان الصغير", name: "kicker", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "description", widget: "text" }
+              - label: "الأسئلة والإجابات"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.question}}"
+                fields:
+                  - { label: "السؤال", name: "question", widget: "string" }
+                  - { label: "الإجابة", name: "answer", widget: "text" }
+          - label: "التواصل معنا"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "description", widget: "text" }
+              - { label: "نص زر واتساب", name: "whatsappButtonText", widget: "string" }
+              - { label: "نص زر الاتصال", name: "callButtonText", widget: "string" }
+              - label: "نقاط الثقة"
+                name: "trust"
+                widget: "list"
+                field: { label: "النقطة", name: "point", widget: "string" }
+              - { label: "رسالة واتساب العامة", name: "whatsappMessage", widget: "string" }
+              - { label: "رسالة طلب التجربة", name: "trialMessage", widget: "string" }
+              - { label: "رسالة السؤال عن منتج غير موجود", name: "emptyCatalogMessage", widget: "string" }
+          - label: "تذييل الموقع"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "وصف مختصر للموقع", name: "description", widget: "text" }
+              - { label: "ملاحظة الحقوق", name: "note", widget: "string" }
+              - label: "روابط التصنيفات في أسفل الموقع"
+                name: "categories"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "اسم التصنيف", name: "label", widget: "string" }
+                  - { label: "وجهة الرابط", name: "url", widget: "string" }
+          - label: "عنوان قسم الأخبار"
+            name: "news"
+            widget: "object"
+            fields:
+              - { label: "العنوان الصغير", name: "kicker", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوصف", name: "description", widget: "text" }
+              - { label: "رسالة عدم وجود أخبار", name: "emptyMessage", widget: "string" }
+      - name: "products"
+        label: "المنتجات والأسعار"
+        file: "content/products.json"
+        format: "json"
+        fields:
+          - label: "أقسام المنتجات"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "اسم القسم", name: "title", widget: "string" }
+              - { label: "وصف القسم", name: "description", widget: "text", required: false }
+              - label: "المنتجات داخل هذا القسم"
+                name: "products"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "اسم المنتج", name: "title", widget: "string" }
+                  - { label: "وصف مختصر", name: "description", widget: "text" }
+                  - { label: "تفاصيل المنتج", name: "details", widget: "text", required: false }
+                  - { label: "السعر كما تريد عرضه للزائر", name: "price", widget: "string", required: false, hint: "مثال: 500 جنيه شهريًا. اتركه فارغًا إذا كان السعر حسب الطلب." }
+                  - { label: "صورة المنتج", name: "image", widget: "image", required: false }
+                  - { label: "شارة اختيارية", name: "badge", widget: "string", required: false, hint: "مثال: الأكثر طلبًا أو جديد" }
+                  - { label: "نص زر الطلب", name: "primaryLabel", widget: "string", required: false }
+                  - label: "الزر الثاني"
+                    name: "secondaryAction"
+                    widget: "select"
+                    options:
+                      - { label: "بدون زر ثانٍ", value: "none" }
+                      - { label: "طلب تجربة", value: "trial" }
+                      - { label: "طلب تثبيت", value: "install" }
+                      - { label: "استفسار عن المنتج", value: "ask" }
+                  - { label: "نص الزر الثاني", name: "secondaryLabel", widget: "string", required: false }
+      - name: "news"
+        label: "الأخبار والنشرات"
+        file: "content/news.json"
+        format: "json"
+        fields:
+          - label: "الأخبار المنشورة"
+            name: "articles"
+            widget: "list"
+            summary: "{{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "عنوان الخبر", name: "title", widget: "string" }
+              - { label: "تاريخ النشر", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+              - { label: "ملخص الخبر", name: "summary", widget: "text" }
+              - { label: "صورة الخبر", name: "image", widget: "image", required: false }
+              - { label: "تفاصيل الخبر", name: "body", widget: "text", required: false }
+              - { label: "عرض الخبر على الموقع", name: "published", widget: "boolean", default: true }

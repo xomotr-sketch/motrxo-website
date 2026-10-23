@@ -341,3 +341,30 @@ details[open] .pm::after { transform: rotate(0); }
 @media (max-width: 640px) { .hero::before, [dir=ltr] .hero::before { background: linear-gradient(0deg, var(--bg) 5%, #f4f7fbe6 50%, #f4f7fbb3 100%); } }
 
 .pn:hover { color: var(--or); text-decoration: underline; text-underline-offset: 4px; }
+
+
+/* News and updates */
+.news { padding: 82px 0; background: var(--bg2); border-block: 1px solid var(--line); }
+.news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 18px; }
+.news-card { overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--r); background: linear-gradient(180deg, var(--card2), var(--card)); box-shadow: 0 10px 30px -22px #0b1f3a55; }
+.news-image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #eaf0f8; }
+.news-content { display: flex; flex: 1; flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px; }
+.news-date { color: var(--mu); font-size: 13px; }
+.news-title { color: var(--tx); font-size: 20px; font-weight: 800; }
+.news-summary { color: var(--mu); font-size: 15px; line-height: 1.8; }
+.news-details { width: 100%; border-top: 1px dashed var(--line2); padding-top: 12px; color: var(--tx); }
+.news-details summary { color: var(--or); cursor: pointer; font-weight: 700; }
+.news-body { margin-top: 10px; color: var(--mu); line-height: 1.9; white-space: pre-line; overflow-wrap: anywhere; }
+.news-empty { margin: 0 auto; padding: 22px; border: 1px dashed var(--line2); border-radius: 14px; color: var(--mu); text-align: center; }
+.news-empty[hidden] { display: none; }
+@media (max-width: 640px) {
+  .news { padding: 60px 0; }
+  .news-content { padding: 16px; }
+}
+
+
+/* CMS-editable background and product prices */
+.hero-bg-image { position: absolute; inset: 0; z-index: 0; }
+.hero-bg canvas { position: relative; z-index: 1; }
+.product-price { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 10px 0; border-block: 1px solid var(--line); color: var(--mu); font-size: 14px; }
+.product-price strong { color: var(--or); font-size: 18px; font-weight: 800; }

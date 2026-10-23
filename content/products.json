@@ -1,0 +1,280 @@
+{
+  "categories": [
+    {
+      "title": "بيانات الإصلاح",
+      "description": "معلومات المصنع ومخططات الأسلاك وأكواد الأعطال.",
+      "products": [
+        {
+          "title": "ALLDATA EU",
+          "description": "بيانات إصلاح وصيانة ومخططات كهربائية للمركبات الأوروبية.",
+          "details": "بيانات إصلاح وصيانة ومخططات كهربائية للمركبات الأوروبية.",
+          "badge": "الأكثر طلبًا",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=ALLDATA%20EU"
+        },
+        {
+          "title": "ALLDATA USA",
+          "description": "بيانات المصنع ومخططات الأسلاك وإجراءات الإصلاح للمركبات الأمريكية.",
+          "details": "بيانات المصنع ومخططات الأسلاك وإجراءات الإصلاح للمركبات الأمريكية.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=ALLDATA%20USA"
+        },
+        {
+          "title": "Identifix",
+          "description": "قاعدة حلول أعطال مبنية على حالات إصلاح حقيقية لتشخيص الأعطال الشائعة.",
+          "details": "قاعدة حلول أعطال مبنية على حالات إصلاح حقيقية لتشخيص الأعطال الشائعة.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=Identifix"
+        },
+        {
+          "title": "Identifix Latin America",
+          "description": "نسخة Identifix لأمريكا اللاتينية: حلول أعطال ومعلومات إصلاح.",
+          "details": "نسخة Identifix لأمريكا اللاتينية: حلول أعطال ومعلومات إصلاح.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=Identifix%20Latin%20America"
+        },
+        {
+          "title": "HaynesPro Cars",
+          "description": "بيانات الإصلاح ومخططات الأسلاك لسيارات الركوب.",
+          "details": "بيانات الإصلاح ومخططات الأسلاك لسيارات الركوب.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=HaynesPro%20Cars"
+        },
+        {
+          "title": "Mitchell ProDemand Cars",
+          "description": "بيانات الإصلاح والتقدير لسيارات الركوب.",
+          "details": "بيانات الإصلاح والتقدير لسيارات الركوب.",
+          "badge": "الأكثر طلبًا",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=Mitchell%20ProDemand%20Cars"
+        },
+        {
+          "title": "HGS Data",
+          "description": "منصة بيانات إصلاح وصيانة وفنية متعددة العلامات التجارية.",
+          "details": "منصة بيانات إصلاح وصيانة وفنية متعددة العلامات التجارية.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=HGS%20Data"
+        }
+      ]
+    },
+    {
+      "title": "أدوات التشخيص",
+      "description": "تشخيص وبرمجة متقدمة بمستوى الوكيل.",
+      "products": [
+        {
+          "title": "Ford IDS",
+          "description": "Ford Integrated Diagnostic Software لتشخيص الوحدات وبرمجتها.",
+          "details": "Ford Integrated Diagnostic Software لتشخيص الوحدات وبرمجتها.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=Ford%20IDS"
+        },
+        {
+          "title": "Ford FJDS",
+          "description": "نسخة J2534 من Ford IDS: تشخيص بمستوى الوكيل، وبرمجة الوحدات وتحديثها لسيارات Ford وLincoln عبر أي جهاز J2534 pass-thru.",
+          "details": "نسخة J2534 من Ford IDS: تشخيص بمستوى الوكيل، وبرمجة الوحدات وتحديثها لسيارات Ford وLincoln عبر أي جهاز J2534 pass-thru.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "install",
+          "secondaryLabel": "اطلب التثبيت",
+          "productUrl": "https://www.motrxo.com/product.html?p=Ford%20FJDS"
+        },
+        {
+          "title": "Toyota Techstream",
+          "description": "Techstream V18.00.008: تشخيص J2534 بمستوى المصنع، وبرمجة ECU لسيارات Toyota وLexus وScion.",
+          "details": "Techstream V18.00.008: تشخيص J2534 بمستوى المصنع، وبرمجة ECU لسيارات Toyota وLexus وScion.",
+          "badge": "الأكثر طلبًا",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "install",
+          "secondaryLabel": "اطلب التثبيت",
+          "productUrl": "https://www.motrxo.com/product.html?p=Toyota%20Techstream"
+        },
+        {
+          "title": "FCA J2534 Flash Downloader",
+          "description": "برمجة وإعادة برمجة pass-thru J2534 لمركبات FCA / Stellantis.",
+          "details": "برمجة وإعادة برمجة pass-thru J2534 لمركبات FCA / Stellantis.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=FCA%20J2534%20Flash%20Downloader"
+        },
+        {
+          "title": "Mazda MDARS",
+          "description": "منصة تشخيص وإعادة برمجة للوكلاء من الجيل الجديد لسيارات مازدا الحديثة.",
+          "details": "منصة تشخيص وإعادة برمجة للوكلاء من الجيل الجديد لسيارات مازدا الحديثة.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=Mazda%20MDARS"
+        },
+        {
+          "title": "Mazda IDS",
+          "description": "برنامج تشخيص متكامل بمستوى الوكيل لفحص الوحدات وبرمجتها وفلاشها.",
+          "details": "برنامج تشخيص متكامل بمستوى الوكيل لفحص الوحدات وبرمجتها وفلاشها.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=Mazda%20IDS"
+        },
+        {
+          "title": "GM Techline",
+          "description": "SPS2 — تشخيص وبرمجة مفاتيح بمستوى الوكيل (ACDELCO).",
+          "details": "SPS2 — تشخيص وبرمجة مفاتيح بمستوى الوكيل (ACDELCO).",
+          "badge": "★ جديد",
+          "price": "",
+          "image": "",
+          "primaryLabel": "استفسر عبر واتساب",
+          "secondaryAction": "none",
+          "secondaryLabel": "",
+          "productUrl": "https://www.motrxo.com/product.html?p=GM%20Techline"
+        }
+      ]
+    },
+    {
+      "title": "منصات الوكلاء",
+      "description": "أنظمة خدمة الشركات المصنّعة أونلاين.",
+      "products": [
+        {
+          "title": "JLR Topix Cloud",
+          "description": "وصول وكيل JLR: Topix Cloud مع SDD وDDA — تشخيص وبرمجة وبيانات الورشة لسيارات Land Rover وJaguar.",
+          "details": "وصول وكيل JLR: Topix Cloud مع SDD وDDA — تشخيص وبرمجة وبيانات الورشة لسيارات Land Rover وJaguar.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "install",
+          "secondaryLabel": "اطلب التثبيت",
+          "productUrl": "https://www.motrxo.com/product.html?p=JLR%20Topix%20Cloud"
+        },
+        {
+          "title": "Opel TIS2WEB SPS",
+          "description": "برمجة وحدات Opel / Vauxhall عبر TIS2WEB SPS.",
+          "details": "برمجة وحدات Opel / Vauxhall عبر TIS2WEB SPS.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=Opel%20TIS2WEB%20SPS"
+        },
+        {
+          "title": "Opel TIS2WEB GDS2",
+          "description": "تشخيص OEM لـ Opel / Vauxhall عبر TIS2WEB GDS2.",
+          "details": "تشخيص OEM لـ Opel / Vauxhall عبر TIS2WEB GDS2.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=Opel%20TIS2WEB%20GDS2"
+        },
+        {
+          "title": "BMW Package",
+          "description": "طقم أدوات وكيل BMW الكامل في حزمة واحدة.",
+          "details": "طقم أدوات وكيل BMW الكامل في حزمة واحدة.",
+          "badge": "الأكثر طلبًا",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "install",
+          "secondaryLabel": "اطلب التثبيت",
+          "productUrl": "https://www.motrxo.com/product.html?p=BMW%20Package"
+        },
+        {
+          "title": "VAG Package",
+          "description": "طقم أدوات وكيل VW / Audi / Seat / Skoda الكامل في حزمة واحدة.",
+          "details": "طقم أدوات وكيل VW / Audi / Seat / Skoda الكامل في حزمة واحدة.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "install",
+          "secondaryLabel": "اطلب التثبيت",
+          "productUrl": "https://www.motrxo.com/product.html?p=VAG%20Package"
+        }
+      ]
+    },
+    {
+      "title": "الشاحنات",
+      "description": "مركبات تجارية ومعدات ثقيلة.",
+      "products": [
+        {
+          "title": "HaynesPro Truck",
+          "description": "بيانات الإصلاح ومخططات الأسلاك للشاحنات والمركبات التجارية.",
+          "details": "بيانات الإصلاح ومخططات الأسلاك للشاحنات والمركبات التجارية.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=HaynesPro%20Truck"
+        },
+        {
+          "title": "Mitchell ProDemand Truck",
+          "description": "بيانات الإصلاح والتقدير للشاحنات والمركبات الثقيلة.",
+          "details": "بيانات الإصلاح والتقدير للشاحنات والمركبات الثقيلة.",
+          "badge": "",
+          "price": "",
+          "image": "",
+          "primaryLabel": "اطلب الآن",
+          "secondaryAction": "trial",
+          "secondaryLabel": "اطلب تجربة البرنامج",
+          "productUrl": "https://www.motrxo.com/product.html?p=Mitchell%20ProDemand%20Truck"
+        }
+      ]
+    }
+  ]
+}

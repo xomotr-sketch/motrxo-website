@@ -55,7 +55,7 @@ def main() -> None:
     for path in (
         "assets/apple-touch-icon.png", "assets/canbus.js", "assets/cms-content.js",
         "assets/favicon.png", "assets/logo.webp", "assets/news.js", "assets/site.js",
-        "assets/styles.css", "assets/service-schedule.css", "assets/service-schedule.js",
+        "assets/styles.css", "assets/redesign.css", "assets/service-schedule.css", "assets/service-schedule.js",
         "assets/service-section.js", "assets/dtc-integration.css",
     ):
         copy_file(path)

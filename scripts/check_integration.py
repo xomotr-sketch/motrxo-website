@@ -87,14 +87,17 @@ def main() -> None:
         fail("Sitemap does not contain exactly main plus generated DTC paths")
 
     netlify = (ROOT / "netlify.toml").read_text(encoding="utf-8")
-    for expected in ('command = "python3 scripts/build_site.py"', 'publish = "site"', 'from = "/dtc/:code"'):
+    for expected in ('command = "python3 scripts/build_site.py"', 'publish = "site"'):
         if expected not in netlify: fail("Missing Netlify configuration: " + expected)
     if 'from = "/*"' in netlify or 'to = "/index.html"' in netlify:
         fail("A catch-all portal redirect would mask unknown APIs")
 
+    route = (ROOT / "netlify/functions/dtc-page/index.mjs").read_text(encoding="utf-8")
+    if 'path: "/dtc/:code"' not in route:
+        fail("DTC native route missing")
     function_sources = [
         ROOT / "netlify/functions/vehicle-makes.mjs", ROOT / "netlify/functions/vehicle-models.mjs",
-        ROOT / "netlify/functions/dtc-page/index.cjs"
+        ROOT / "netlify/functions/dtc-page/renderer.cjs", ROOT / "netlify/functions/dtc-page/index.mjs"
     ]
     for source in function_sources:
         subprocess.run(["node", "--check", str(source)], check=True)

@@ -4,9 +4,10 @@ import makes from "../netlify/functions/vehicle-makes.mjs";
 import models from "../netlify/functions/vehicle-models.mjs";
 
 const require = createRequire(import.meta.url);
-const page = require("../netlify/functions/dtc-page/index.cjs");
+const page = require("../netlify/functions/dtc-page/renderer.cjs");
 const pageData = require("../netlify/functions/dtc-page/data.json");
 const code = pageData.records[0].code;
+const nativeRoute = (await import("../netlify/functions/dtc-page/index.mjs")).default;
 
 let mode = "ok";
 globalThis.fetch = async (url) => {
@@ -46,4 +47,9 @@ assert.match(rendered.body, /noindex/);
 rendered = await page.handler({ httpMethod: "HEAD", queryStringParameters: { code }, headers: {} });
 assert.equal(rendered.statusCode, 200);
 assert.equal(rendered.body, "");
+let native = await nativeRoute(new Request("https://www.motrxo.com/dtc/P0122"));
+assert.equal(native.status, 200);
+assert.match(await native.text(), /P0122/);
+native = await nativeRoute(new Request("https://www.motrxo.com/dtc/P1999"));
+assert.equal(native.status, 404);
 console.log("Function checks passed.");

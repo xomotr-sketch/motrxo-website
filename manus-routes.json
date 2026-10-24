@@ -1,0 +1,1 @@
+{"routes":[{"path":"/","title":"MOTRXO"},{"path":"/dtc/","title":"MOTRXO DTC reference"},{"path":"/dtc/:code","title":"MOTRXO DTC definition"}]}

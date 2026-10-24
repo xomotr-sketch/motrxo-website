@@ -1,0 +1,25 @@
+/* Additive MOTRXO DTC/service integration styles; existing store styles are unchanged. */
+.motrxo-dtc-callout { padding: 28px 0 8px; }
+.motrxo-dtc-callout .motrxo-dtc-callout-inner { display: flex; align-items: center; justify-content: space-between; gap: 22px; padding: 28px; border: 1px solid #c5d3e4; border-radius: 18px; background: linear-gradient(135deg, #eef5ff, #fff); }
+.motrxo-dtc-callout h2 { margin: 0 0 7px; font-size: clamp(22px, 3vw, 30px); }
+.motrxo-dtc-callout p { color: var(--mu); max-width: 680px; }
+.motrxo-service-locale { width: min(1120px, calc(100% - 36px)); margin: 0 auto 12px; display: flex; flex-wrap: wrap; gap: 7px; justify-content: flex-start; }
+.motrxo-service-locale-button { min-height: 34px; padding: 6px 10px; border: 1px solid #c5d3e4; border-radius: 999px; color: #294764; background: #fff; font-size: 12px; font-weight: 700; }
+.motrxo-service-locale-button:hover, .motrxo-service-locale-button.is-active { color: #fff; background: var(--or); border-color: var(--or); }
+.nav .motrxo-nav-extra { color: #1456e0; }
+@media (max-width: 1180px) {
+  .bar { gap: 12px; }
+  .nav { gap: 2px; font-size: 13px; }
+  .nav a { padding-inline: 8px; }
+  .nav .motrxo-nav-extra { font-size: 12px; padding-inline: 7px; }
+}
+@media (max-width: 1040px) {
+  .burger { display: flex; }
+  .nav { position: fixed; inset: 72px 0 auto; flex-direction: column; gap: 2px; padding: 12px 20px 20px; background: #fffffff7; border-bottom: 1px solid var(--line); transform: translateY(-8px); opacity: 0; pointer-events: none; transition: .25s; margin: 0; }
+  .nav.open { transform: none; opacity: 1; pointer-events: auto; }
+  .nav a, .nav .motrxo-nav-extra { padding: 12px 14px; font-size: 15px; }
+}
+@media (max-width: 720px) {
+  .motrxo-dtc-callout .motrxo-dtc-callout-inner { align-items: stretch; flex-direction: column; padding: 22px; }
+  .motrxo-service-locale { width: calc(100% - 24px); }
+}

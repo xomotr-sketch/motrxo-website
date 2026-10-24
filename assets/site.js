@@ -39,7 +39,8 @@
   });
   query?.addEventListener('input', applyFilter);
   document.addEventListener('keydown', event => {
-    if (event.key === '/' && document.activeElement !== query) {
+    const isEditableTarget = target => target instanceof Element && Boolean(target.closest('input, textarea, select, [contenteditable="true"], [contenteditable=""]'));
+    if (event.key === '/' && !isEditableTarget(event.target) && document.activeElement !== query) {
       event.preventDefault(); query?.focus();
     }
     if (event.key === 'Escape' && query) { query.value = ''; applyFilter(); query.blur(); }

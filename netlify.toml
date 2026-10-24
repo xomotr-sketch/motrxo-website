@@ -1,5 +1,18 @@
 [build]
-  publish = "."
+  command = "python3 scripts/build_site.py"
+  publish = "site"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/dtc/:code"
+  to = "/.netlify/functions/dtc-page?code=:code"
+  status = 200
+  force = true
 
 [[headers]]
   for = "/*"

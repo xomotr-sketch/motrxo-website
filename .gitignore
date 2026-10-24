@@ -1,0 +1,8 @@
+# Generated static publication output and local-only artifacts
+site/
+.netlify/
+.env
+.env.*
+*.local
+__pycache__/
+*.pyc

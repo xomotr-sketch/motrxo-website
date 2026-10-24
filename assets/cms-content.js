@@ -264,6 +264,14 @@
       });
     };
     buildLinks(document.getElementById('nav'), settings.navigation);
+    const integrationNav = document.getElementById('nav');
+    if (integrationNav && !integrationNav.querySelector('[data-motrxo-integration-nav]')) {
+      const portal = el('a', 'motrxo-nav-extra', 'دليل رموز الأعطال');
+      portal.href = '/dtc/'; portal.dataset.motrxoIntegrationNav = 'portal';
+      const service = el('a', 'motrxo-nav-extra', 'جدول الخدمة');
+      service.href = '#service-schedule'; service.dataset.motrxoIntegrationNav = 'service';
+      integrationNav.append(portal, service);
+    }
     buildLinks(document.querySelector('.ft-nav'), settings.footerNavigation);
   };
 

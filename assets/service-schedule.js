@@ -635,6 +635,9 @@
   function renderScheduleTable(profile) {
     var limit = scheduleState.mileage;
     var rows = checkpoints(profile, limit);
+    var issuer = issuerName(profile);
+    var sourceTitle = plainText(profile.source_title);
+    var attribution = issuer ? '<p class="ss-official-attribution"><strong>' + escapeHtml(text("issuer")) + ':</strong> ' + escapeHtml(issuer) + (sourceTitle ? '<span> · ' + escapeHtml(sourceTitle) + '</span>' : "") + "</p>" : "";
     var noRows = "";
     if (!rows.length) {
       var next = nextCheckpoint(profile, limit);
@@ -643,6 +646,7 @@
     return '<section class="ss-schedule-panel" aria-labelledby="ss-schedule-heading">' +
       '<div class="ss-schedule-top"><div><span class="ss-panel-kicker">' + escapeHtml(text("documentedTasksOnly")) + '</span><h3 id="ss-schedule-heading">' + escapeHtml(text("scheduleThrough")) + " " + escapeHtml(displayNumber(limit)) + " " + escapeHtml(text("km")) + "</h3></div>" +
       '<label class="ss-mileage-control"><span>' + escapeHtml(text("mileageLimit")) + '</span><input type="number" min="1000" max="100000" step="1000" inputmode="numeric" value="' + escapeHtml(limit) + '" data-ss-control="mileage" aria-label="' + escapeHtml(text("mileageLimit")) + '"><b>' + escapeHtml(text("km")) + "</b></label></div>" +
+      attribution +
       noRows +
       (rows.length ? '<div class="ss-table-wrap" tabindex="0" role="region" aria-label="' + escapeHtml(text("title")) + '"><table class="ss-table"><caption>' + escapeHtml(text("documentedTasksOnly")) + '</caption><thead><tr><th scope="col">' + escapeHtml(text("checkpoint")) + '</th><th scope="col">' + escapeHtml(text("documentedTask")) + '</th><th scope="col">' + escapeHtml(text("timeBasis")) + "</th></tr></thead><tbody>" +
         rows.map(function (row) {
@@ -799,11 +803,10 @@
       panel = '<article class="ss-profile-card"><div class="ss-profile-heading"><div><span class="ss-panel-kicker">' + escapeHtml(text("profileScope")) + "</span><h3>" + escapeHtml(brandName(brand)) + " · " + escapeHtml(plainText(profile.model)) + " · " + escapeHtml(yearLabel) + " · " + escapeHtml(plainText(profile.variant) || text("unspecifiedVariant")) + "</h3></div>" + renderCompleteness(profile) + "</div>" +
         (scopeYearKey(profile) === DOCUMENT_SCOPE_YEAR ? '<p class="ss-document-scope-caution">' + escapeHtml(text("documentScopeCaution")) + "</p>" : "") +
         profileConditions(profile) +
-        '<h4 class="ss-reference-title">' + escapeHtml(text("profileReference")) + "</h4>" + renderProfileReference(profile, data) +
         renderScheduleTable(profile) + renderNotes(profile, brand) +
         "</article>";
     }
-    return '<div class="ss-result-layout"><div class="ss-result-main">' + panel + "</div>" + renderSources(brand, data) + "</div>";
+    return '<div class="ss-result-layout"><div class="ss-result-main">' + panel + "</div></div>";
   }
 
   function renderReady(data) {
